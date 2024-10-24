@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Weather Updates</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Video Background -->
+    <video autoplay muted loop id="weather-video">
+        <source src="default.mp4" type="video/mp4" id="video-source">
+        Your browser does not support the video tag.
+    </video>
+
+    <header id="header">
+        <h1>Live Weather Updates</h1>
+    </header>
+
+    <!-- City Search Input -->
+    <div class="search-container">
+        <input type="text" id="city-input" placeholder="Enter city name">
+        <button onclick="searchCity()">Search</button>
+        <button id="unit-toggle" onclick="toggleUnits()">Switch to Fahrenheit</button>
+    </div>
+
+    <div class="weather-container">
+        <div class="weather">
+            <h2 id="city-name">City Name</h2>
+            <p id="weather-desc">Weather Description</p>
+            <p>Temperature: <span id="temp">--</span>°<span id="temp-unit">C</span></p>
+            <p>Humidity: <span id="humidity">--</span>%</p>
+            <p>Wind Speed: <span id="wind-speed">--</span> m/s</p>
+            <p>Sunrise: <span id="sunrise">--:--</span></p>
+            <p>Sunset: <span id="sunset">--:--</span></p>
+            <p>Air Quality Index (AQI): <span id="aqi">--</span></p>
+            <p id="weather-tips"></p>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <p>Weather data provided by OpenWeatherMap</p>
+    </footer>
+
+    <script src="weather.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    transition: background 0.5s ease;
+    position: relative;
+    z-index: 2;
+}
+
+header, footer {
+    padding: 15px;
+    color: white;
+    transition: background-color 0.5s ease;
+    background-color: #888; /* Default ash grey */
+}
+
+.search-container {
+    margin: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+input {
+    padding: 10px;
+    width: 250px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.weather-container {
+    margin-top: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.weather {
+    display: inline-block;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Time-based themes */
+.early-morning { background-color: #FF4500; }  /* Vibrant Orange (6 AM - 9 AM) */
+.morning { background-color: #FFA500; }  /* Light Orange (9 AM - 11:30 AM) */
+.midday { background-color: #FFD700; }  /* Vibrant Yellow (11:31 AM - 3 PM) */
+.afternoon { background-color: #FFC107; }  /* Gold Yellow (3 PM - 5:30 PM) */
+.evening-even { background-color: #FF8C00; }  /* Dark Orange (Even dates, 5:31 PM - 6:30 PM) */
+.evening-odd { background-color: #800080; }  /* Purple (Odd dates, 5:31 PM - 6:30 PM) */
+.late-evening { background-color: #00008B; }  /* Dark Blue (6:31 PM - 11 PM) */
+.late-night { background-color: #000080; }  /* Navy Blue (11 PM - 1 AM) */
+.night { background-color: #00008B; }  /* Dark Blue (1 AM - 6 AM) */
+
+/* Video Background */
+#weather-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    transition: opacity 1s ease;
+}
